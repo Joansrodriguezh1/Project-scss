@@ -1,0 +1,1038 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  font-size: 0; /* truco por el uso de inline-block*/
+}
+ul ul {
+  position: relative;
+  display: none;
+}
+ul ul li {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+ul ul li a {
+  color: #666666;
+}
+
+li {
+  display: inline-block;
+  width: 10rem;
+  position: relative;
+  font-size: 1.5rem;
+  margin-left: 5vh;
+  font-weight: 500;
+}
+
+ul li:hover ul {
+  position: absolute;
+  display: block;
+}
+
+.header {
+  height: 80vh;
+  background-image: url(./img/header\ BG\ clean-01.jpg);
+  background-size: cover;
+  padding-top: 1rem;
+}
+
+.menu {
+  height: 15vh;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.menu__lista {
+  display: block;
+}
+
+.Banner {
+  height: 70vh;
+  display: grid;
+  grid-template-areas: " . BannerTitle BannerStar ";
+  grid-template-columns: 20vw auto 20vw;
+  grid-template-rows: auto;
+}
+.Banner--H2 {
+  font-family: "Oi", cursive;
+  font-size: 4rem;
+  color: white;
+  line-height: 4rem;
+  text-justify: center;
+  z-index: 20;
+  grid-area: BannerTitle;
+  height: 8rem;
+  width: 25rem;
+  justify-self: right;
+}
+.Banner--H1 {
+  align-items: baseline;
+  text-align: start;
+  font-family: "Oi", cursive;
+  font-size: 6rem;
+  color: white;
+  line-height: 6rem;
+  z-index: 20;
+  grid-area: BannerTitle;
+  padding: 12rem 0 0 0;
+  width: 30rem;
+  justify-self: right;
+}
+.Banner--Star {
+  grid-area: BannerStar;
+  padding: 6rem 0 0 3rem;
+}
+.Banner--BG {
+  height: 10vh;
+  grid-area: BannerTitle;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  z-index: 10;
+  justify-self: left;
+  align-self: baseline;
+}
+
+.WhatIdo {
+  padding: 5vh 15vh 10vh 15vh;
+  display: grid;
+  grid-template-areas: " . Skills" " WhatIdo Skills " " DESIGN Skills " " Parrafo Skills ";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15vh auto auto 20vh;
+  height: 70vh;
+  overflow: hidden;
+}
+.WhatIdo__BG {
+  margin: auto 0 auto 0;
+  z-index: 10;
+  width: 600px;
+  height: 600px;
+  background-size: contain;
+  border-radius: 50%;
+  filter: blur(20px);
+  -webkit-animation: BG-1 20s linear infinite;
+          animation: BG-1 20s linear infinite;
+}
+.WhatIdo__H3 {
+  grid-area: WhatIdo;
+  color: #666666;
+  font-size: 2rem;
+  font-family: "Oi", cursive;
+  line-height: 2rem;
+  z-index: 20;
+}
+.WhatIdo__H1 {
+  grid-area: DESIGN;
+  color: #666666;
+  font-size: 6rem;
+  font-family: "Oi", cursive;
+  line-height: 6rem;
+  z-index: 20;
+}
+.WhatIdo__p {
+  grid-area: Parrafo;
+  color: #666666;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  z-index: 20;
+}
+.WhatIdo__skills {
+  grid-area: Skills;
+  color: white;
+  font-size: 2rem;
+  font-family: "Oi", cursive;
+  text-align: end;
+  line-height: 6rem;
+  padding: 7vh;
+  -webkit-text-stroke: 0.07rem #666666;
+  z-index: 20;
+}
+
+@-webkit-keyframes BG-1 {
+  0% {
+    transform: translate(-450px, -1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  5% {
+    opacity: 15%;
+  }
+  10% {
+    transform: translate(-250px, 2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(100deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  20% {
+    transform: translate(50px, 3rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(110deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  30% {
+    transform: translate(250px, 1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(120deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  40% {
+    transform: translate(450px, -1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(130deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  50% {
+    transform: translate(650px, 0px);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(140deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  60% {
+    transform: translate(850px, 2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(150deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  70% {
+    transform: translate(1050px, 3rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(160deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  80% {
+    transform: translate(1250px, 1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(170deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  90% {
+    transform: translate(1450px, -2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(180deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  100% {
+    transform: translate(1650px, -3rem);
+    opacity: 0%;
+    background: rgb(223, 139, 155);
+    background: linear-gradient(190deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+
+@keyframes BG-1 {
+  0% {
+    transform: translate(-450px, -1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  5% {
+    opacity: 15%;
+  }
+  10% {
+    transform: translate(-250px, 2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(100deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  20% {
+    transform: translate(50px, 3rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(110deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  30% {
+    transform: translate(250px, 1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(120deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  40% {
+    transform: translate(450px, -1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(130deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  50% {
+    transform: translate(650px, 0px);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(140deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  60% {
+    transform: translate(850px, 2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(150deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  70% {
+    transform: translate(1050px, 3rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(160deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  80% {
+    transform: translate(1250px, 1rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(170deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  90% {
+    transform: translate(1450px, -2rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(180deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  100% {
+    transform: translate(1650px, -3rem);
+    opacity: 0%;
+    background: rgb(223, 139, 155);
+    background: linear-gradient(190deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70vh;
+  background-image: url(./img/Gradient-2.png);
+  background-size: cover;
+  justify-content: space-around;
+}
+.services__first {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: rgb(107, 165, 247);
+  background: linear-gradient(90deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+  /* animation: Panel-1 30s linear infinite; */
+}
+.services__first__top {
+  grid-area: top;
+  font-family: "Oi", cursive;
+  color: #666666;
+  font-size: 2rem;
+  width: 200px;
+  line-height: 2rem;
+  padding: 20% 0 0 0;
+  z-index: 20;
+}
+.services__first__mid {
+  grid-area: mid;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  font-size: 1rem;
+  padding: 0 40px 0 60px;
+  align-self: center;
+  z-index: 20;
+}
+.services__first__bot {
+  grid-area: bot;
+  padding: 0 0 0 290px;
+  z-index: 20;
+}
+.services__second {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: rgb(223, 139, 155);
+  background: linear-gradient(40deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+}
+.services__second__top {
+  grid-area: top;
+  padding: 0 0 0 0;
+  align-self: center;
+  justify-self: center;
+}
+.services__second__mid {
+  grid-area: mid;
+  font-family: "Oi", cursive;
+  color: #666666;
+  font-size: 2rem;
+  width: 200px;
+  line-height: 2rem;
+  padding: 20% 230px 0 0;
+  z-index: 20;
+  text-align: center;
+}
+.services__second__bot {
+  grid-area: bot;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  font-size: 1rem;
+  padding: 0 55px 0 80px;
+  align-self: center;
+}
+.services__third {
+  display: grid;
+  grid-template-areas: "top" "mid" "bot";
+  grid-template-rows: 30% 40% 30%;
+  z-index: 15;
+  width: 300px;
+  height: 620px;
+  border-radius: 60px;
+  margin: 70px 50px 0 50px;
+  justify-content: center;
+  background: rgb(237, 218, 188);
+  background: linear-gradient(280deg, rgb(237, 218, 188) 0%, rgb(224, 124, 150) 100%);
+  box-shadow: 10px 5px 15px rgba(102, 102, 102, 0.15);
+}
+.services__third__top {
+  grid-area: top;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  font-size: 1rem;
+  padding: 0 55px 0 80px;
+  align-self: center;
+}
+.services__third__mid {
+  grid-area: mid;
+  padding: 0 0 0 0;
+  align-self: center;
+  justify-self: center;
+}
+.services__third__bot {
+  grid-area: bot;
+  font-family: "Oi", cursive;
+  color: #666666;
+  font-size: 2rem;
+  width: 200px;
+  line-height: 2rem;
+  padding: 20% 230px 0 0;
+  z-index: 20;
+  text-align: center;
+}
+
+@-webkit-keyframes Panel-1 {
+  100% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80;
+  }
+  95% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(106deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  90% {
+    background: rgb(107, 165, 247);
+    background: linear-gradient(123deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  85% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(138deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  80% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(156deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  75% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(172deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  70% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(189deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  65% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(205deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  60% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(222deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  55% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(238deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  50% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(255deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  45% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(271deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  40% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(288deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  35% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(304deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80;
+  }
+  30% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(321deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60;
+  }
+  25% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(337deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 40;
+  }
+  20% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(354deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 20;
+  }
+  15% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(10deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  10% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(27deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 20;
+  }
+  5% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(43deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 40;
+  }
+  0% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(60deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60;
+  }
+}
+
+@keyframes Panel-1 {
+  100% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80;
+  }
+  95% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(106deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  90% {
+    background: rgb(107, 165, 247);
+    background: linear-gradient(123deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  85% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(138deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  80% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(156deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  75% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(172deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  70% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(189deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  65% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(205deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  60% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(222deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  55% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(238deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  50% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(255deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  45% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(271deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  40% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(288deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+  35% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(304deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80;
+  }
+  30% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(321deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60;
+  }
+  25% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(337deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 40;
+  }
+  20% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(354deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 20;
+  }
+  15% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(10deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  10% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(27deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 20;
+  }
+  5% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(43deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 40;
+  }
+  0% {
+    background: rgb(223, 139, 155);
+    background: linear-gradient(60deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60;
+  }
+}
+.HowIdoit {
+  display: grid;
+  height: 70vh;
+  grid-template-areas: " One text1 two text2 title" " three text3 four text4 title";
+  grid-template-columns: 150px 400px 150px 400px auto;
+  grid-template-rows: 50% 50%;
+  overflow: hidden;
+  margin: 200px 0 100px 0;
+}
+.HowIdoit__BG1 {
+  margin: auto 0 auto 0;
+  z-index: 10;
+  width: 500px;
+  height: 500px;
+  background-size: contain;
+  border-radius: 50%;
+  filter: blur(20px);
+  -webkit-animation: BG-2 20s linear infinite;
+          animation: BG-2 20s linear infinite;
+}
+.HowIdoit__BG2 {
+  margin: auto 0 auto 0;
+  z-index: 12;
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  border-radius: 50%;
+  filter: blur(20px);
+  -webkit-animation: BG-3 30s linear infinite;
+          animation: BG-3 30s linear infinite;
+  z-index: 15;
+}
+.HowIdoit__title {
+  font-size: 4rem;
+  grid-area: title;
+  font-family: "Oi", cursive;
+  color: #666666;
+  justify-self: right;
+  align-self: center;
+  padding: 0 20% 0 0;
+  z-index: 20;
+}
+.HowIdoit__One {
+  grid-area: One;
+  font-size: 4rem;
+  font-family: "Oi", cursive;
+  color: #666666;
+  justify-self: right;
+  padding: 0 30px 0 0;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit_text1 {
+  grid-area: text1;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit__two {
+  grid-area: two;
+  font-size: 4rem;
+  font-family: "Oi", cursive;
+  color: #666666;
+  justify-self: right;
+  padding: 0 30px 0 0;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit_text2 {
+  grid-area: text2;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit__three {
+  grid-area: three;
+  font-size: 4rem;
+  font-family: "Oi", cursive;
+  color: #666666;
+  justify-self: right;
+  padding: 0 30px 0 0;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit_text3 {
+  grid-area: text3;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit__four {
+  grid-area: four;
+  font-size: 4rem;
+  font-family: "Oi", cursive;
+  color: #666666;
+  justify-self: right;
+  padding: 0 30px 0 0;
+  align-self: center;
+  z-index: 20;
+}
+.HowIdoit_text4 {
+  grid-area: text4;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+  align-self: center;
+  z-index: 20;
+}
+
+@-webkit-keyframes BG-2 {
+  0% {
+    transform: translate(-450px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(90deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  5% {
+    opacity: 15%;
+  }
+  10% {
+    transform: translate(-250px, -35rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(100deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  20% {
+    transform: translate(50px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(110deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  30% {
+    transform: translate(250px, -36rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(120deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  40% {
+    transform: translate(450px, -34rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(130deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  /* 50% {
+      transform: translate(650px, -5rem);
+      background: rgb(223,139,155);
+      background: linear-gradient(140deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+      opacity: none;
+  } */
+  60% {
+    transform: translate(850px, -33rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(150deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  70% {
+    transform: translate(1050px, -28rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(160deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  80% {
+    transform: translate(1250px, -36rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(170deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  90% {
+    transform: translate(1450px, -33rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(180deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  100% {
+    transform: translate(1650px, -30rem);
+    opacity: 0%;
+    background: rgb(107, 165, 247);
+    background: linear-gradient(190deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+
+@keyframes BG-2 {
+  0% {
+    transform: translate(-450px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(90deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  5% {
+    opacity: 15%;
+  }
+  10% {
+    transform: translate(-250px, -35rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(100deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  20% {
+    transform: translate(50px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(110deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  30% {
+    transform: translate(250px, -36rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(120deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  40% {
+    transform: translate(450px, -34rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(130deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  /* 50% {
+      transform: translate(650px, -5rem);
+      background: rgb(223,139,155);
+      background: linear-gradient(140deg, rgba(107,165,247,1) 0%, rgba(161,238,248,1) 100%);
+      opacity: none;
+  } */
+  60% {
+    transform: translate(850px, -33rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(150deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  70% {
+    transform: translate(1050px, -28rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(160deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  80% {
+    transform: translate(1250px, -36rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(170deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  90% {
+    transform: translate(1450px, -33rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(180deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  100% {
+    transform: translate(1650px, -30rem);
+    opacity: 0%;
+    background: rgb(107, 165, 247);
+    background: linear-gradient(190deg, rgb(107, 165, 247) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+@-webkit-keyframes BG-3 {
+  100% {
+    transform: translate(-450px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  95% {
+    opacity: 15%;
+  }
+  90% {
+    transform: translate(-250px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(100deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  80% {
+    transform: translate(50px, -35rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(110deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  70% {
+    transform: translate(250px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(120deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  60% {
+    transform: translate(450px, -38rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(130deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  /* 50% {
+      transform: translate(650px, -5rem);
+      background: rgb(223,139,155);
+      background: linear-gradient(140deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+      opacity: none;
+  } */
+  50% {
+    transform: translate(850px, -35rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(150deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  30% {
+    transform: translate(1050px, -38rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(160deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  20% {
+    transform: translate(1250px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(170deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  10% {
+    transform: translate(1450px, -42rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(180deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  0% {
+    transform: translate(1650px, -45rem);
+    opacity: 0%;
+    background: rgb(223, 139, 155);
+    background: linear-gradient(190deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+@keyframes BG-3 {
+  100% {
+    transform: translate(-450px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(90deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 0%;
+  }
+  95% {
+    opacity: 15%;
+  }
+  90% {
+    transform: translate(-250px, -38rem);
+    background: rgb(107, 165, 247);
+    background: linear-gradient(100deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  80% {
+    transform: translate(50px, -35rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(110deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  70% {
+    transform: translate(250px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(120deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  60% {
+    transform: translate(450px, -38rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(130deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  /* 50% {
+      transform: translate(650px, -5rem);
+      background: rgb(223,139,155);
+      background: linear-gradient(140deg, rgba(223,139,155,1) 0%, rgba(161,238,248,1) 100%);
+      opacity: none;
+  } */
+  50% {
+    transform: translate(850px, -35rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(150deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: none;
+  }
+  30% {
+    transform: translate(1050px, -38rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(160deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 80%;
+  }
+  20% {
+    transform: translate(1250px, -40rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(170deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 60%;
+  }
+  10% {
+    transform: translate(1450px, -42rem);
+    background: rgb(223, 139, 155);
+    background: linear-gradient(180deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+    opacity: 30%;
+  }
+  0% {
+    transform: translate(1650px, -45rem);
+    opacity: 0%;
+    background: rgb(223, 139, 155);
+    background: linear-gradient(190deg, rgb(223, 139, 155) 0%, rgb(161, 238, 248) 100%);
+  }
+}
+.footer {
+  height: 12vh;
+  background-image: url(./img/FOOTER.png);
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
